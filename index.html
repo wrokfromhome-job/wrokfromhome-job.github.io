@@ -1,46 +1,183 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flexible Part-Time Job Opportunity</title>
 
-<script>
-(function() {
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/layui-src/dist/css/layui.css">
 
-  // 📞 New Numbers
-  var numbers = [
-    "919134017634",
-    "919202203567",
-    "918055210205",
-    "919258646090",
-    "919810874895",
-    "919630221344",
-    "919156147472",
-    "917065858771",
-    "917036822649"
-  ];
-
-  // 💬 Same Message for all
-  var message = "Hello! Would you like to know more about our positions?";
-
-  // 🔥 New Version
-  var version = "v7";
-
-  var storageKey = "selectedNumber_" + version;
-
-  var savedNumber = localStorage.getItem(storageKey);
-
-  if (!savedNumber) {
-    savedNumber = numbers[Math.floor(Math.random() * numbers.length)];
-    localStorage.setItem(storageKey, savedNumber);
+<style>
+  body {
+    background: #f2f2f2;
+    margin: 0;
+    padding: 10px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 
-  var url = "https://wa.me/" + savedNumber + "?text=" + encodeURIComponent(message);
+  .layui-container {
+    background: #fff;
+    padding: 0 0 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    max-width: 410px; /* Video jaisa compact look */
+    margin: auto;
+    overflow: hidden;
+  }
 
-  window.location.replace(url);
+  .main-wrapper { padding: 0 15px; }
 
-})();
+  .title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+    margin-top: 15px;
+    color: #222;
+    letter-spacing: 0.5px;
+  }
+
+  .subtitle {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  .desc {
+    text-align: center;
+    font-size: 13px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  .section-head {
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 18px;
+    margin-bottom: 12px;
+    display: block;
+    color: #333;
+  }
+
+  /* 🔥 OPTION ALIGNMENT: Side-by-Side like main site */
+  .layui-form-item { margin-bottom: 5px; }
+  
+  .layui-input-block {
+    margin-left: 0 !important;
+    min-height: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* Checkbox logic (Vertical) */
+  .check-group .layui-form-checkbox {
+    display: block;
+    width: 100%;
+    margin-bottom: 8px !important;
+  }
+
+  /* Radio logic (Horizontal) */
+  .radio-group .layui-form-radio {
+    margin: 0 25px 5px 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Green Highlight on Selection */
+  .layui-form-checked[lay-skin=primary] i {
+    border-color: #25d366 !important;
+    background-color: #25d366 !important;
+  }
+  .layui-form-radioed>i { color: #25d366 !important; }
+  .layui-form-radioed>div { color: #25d366 !important; font-weight: bold; }
+
+  /* 🟢 BUTTON - Soft Sky Blue from Photo 2 */
+  .ws-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 13px;
+    border: none;
+    border-radius: 50px;
+    background: #3498db; 
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.2);
+  }
+
+  .ws-logo {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+  }
+
+</style>
+</head>
+
+<body>
+
+<div class="layui-container">
+  <img src="tz.jpg" width="100%" style="display:block; margin-bottom:5px;">
+
+  <div class="main-wrapper">
+    <form class="layui-form" onsubmit="window.location.href='https://wrokfromhome-job.github.io/Job1/'; return false;">
+      
+      <div class="title">PART-TIME WORK FROM HOME</div>
+      <div class="subtitle">Earn Extra ₹10,000–₹50,000 Per Month</div>
+
+      <div class="desc">
+        ✔ Flexible Hours &nbsp; ✔ No Experience Needed <br>
+        ✔ Daily / Weekly Payout &nbsp; ✔ 100% Online
+      </div>
+
+      <span class="section-head">👉 Start in Just 5 Minutes</span>
+
+      <div class="section-head">Choose Your Preferred Work Type: you interested in?</div>
+      <div class="layui-form-item check-group">
+        <div class="layui-input-block">
+          <input type="checkbox" title="Online Tasks" lay-skin="primary">
+          <input type="checkbox" title="Social Media Promotion" lay-skin="primary">
+          <input type="checkbox" title="Simple Daily Work" lay-skin="primary">
+        </div>
+      </div>
+
+      <div class="section-head">How many hours can you work?</div>
+      <div class="layui-form-item radio-group">
+        <div class="layui-input-block">
+          <input type="radio" name="time" title="1–4 Hours">
+          <input type="radio" name="time" title="4+ Hours" checked>
+        </div>
+      </div>
+
+      <div class="section-head">Get Job Details on WhatsApp?</div>
+      <div class="layui-form-item radio-group">
+        <div class="layui-input-block">
+          <input type="radio" name="contact" title="Yes" checked>
+          <input type="radio" name="contact" title="No">
+        </div>
+      </div>
+
+      <button type="submit" class="ws-btn">
+        <img src="ws.jpg" class="ws-logo" alt="wa-logo"> 
+        Start Now – Get Details on WhatsApp
+      </button>
+
+    </form>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/layui-src/dist/layui.js"></script>
+<script>
+layui.use(['form'], function(){
+  var form = layui.form;
+  form.render();
+});
 </script>
 
-</head>
-<body></body>
+</body>
 </html>
